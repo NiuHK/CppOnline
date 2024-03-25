@@ -1,0 +1,57 @@
+﻿
+class UselessClass1 {
+private:
+  int* data;
+
+public:
+  UselessClass1() {
+    data = new int[10];
+    std::cout << "无用的类被创建了！" << std::endl;
+  }
+
+  void initializeData() {
+    for (int i = 0; i < 10; ++i) {
+      data[i] = i;
+    }
+    std::cout << "数据被初始化了！" << std::endl;
+  }
+
+  void processData() {
+    // 这里可以添加一些毫无实际用途的数据处理逻辑
+    std::cout << "数据被处理了！" << std::endl;
+  }
+
+  ~UselessClass1() {
+    delete[] data;
+    std::cout << "无用的类被销毁了！" << std::endl;
+  }
+};
+
+
+class UselessClass {
+private:
+  int* data;
+
+public:
+  UselessClass() {
+    data = new int[10];
+    std::cout << "无用的类被创建了！" << std::endl;
+  }
+
+  void initializeData() {
+    for (int i = 0; i < 10; ++i) {
+      data[i] = i;
+    }
+    std::cout << "数据被初始化了！" << std::endl;
+  }
+
+  void processData() {
+    // 这里可以添加一些毫无实际用途的数据处理逻辑
+    std::cout << "数据被处理了！" << std::endl;
+  }
+
+  ~UselessClass() {
+    delete[] data;
+    std::cout << "无用的类被销毁了！" << std::endl;
+  }
+};
