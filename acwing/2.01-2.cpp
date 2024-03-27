@@ -15,7 +15,7 @@ int main()
         cin >> v[i] >> w[i];
 
     for(int i = 1; i <= n; i++) 
-        for(int j = 1; j <= m; j++)
+        for(int j = m; j >=1; j--)
         {
             //  当前背包容量装不进第i个物品，则价值等于前i-1个物品
             if(j < v[i]) 
