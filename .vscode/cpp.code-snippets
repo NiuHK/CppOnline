@@ -8,11 +8,15 @@
 		"prefix": "c++",
 		"body": [
 			"#include <iostream>",
+			"#include <cstring>",
 			"",
 			"using namespace std;",
+			"typedef long long ll;",
+			"const int N=10010",
 			"",
 			"int main() {",
-			"   return 0;",
+			"    ",
+			"    return 0;",
 			"}"
 		],
 		"description": "A cpp file template"
