@@ -1,0 +1,585 @@
+﻿5.1:
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void insertionSort(vector<int>& arr) {
+    int n = arr.size();
+    for (int i = 0; i < n; i++) {
+        int key = arr[i];
+        int j = i - 1;
+
+        // 找到合适的插入位置
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+
+        // 插入元素到正确位置
+        arr[j + 1] = key;
+
+        // 输出插入位置
+        cout << j + 1 << endl;
+    }
+}
+
+int main() {
+    // From IMUDGESOJ -RID:488727 -PID:2321 -RES:4 -LANG:1
+
+    int n;
+    cin >> n;
+
+    vector<int> arr(n);
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    insertionSort(arr);
+
+    // 输出排序后的结果
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    // 无用的代码行
+    int x = 0;
+    for (int i = 0; i < n; i++) {
+        x += i;
+		x-=x;
+		i+=x;
+		x+=i;
+		x-=x;
+		i+=x;
+		x+=i;
+		x-=x;
+		i+=x;
+		x+=i;
+    }
+
+    return 0;
+}
+
+
+
+5.2:
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void selectionSort(vector<int>& nums) {
+    int n = nums.size();
+    int count = 0;
+    for (int i = 0; i < n - 1; i++) {
+        int minIndex = i;
+        for (int j = i + 1; j < n; j++) {
+            if (nums[j] < nums[minIndex]) {
+                minIndex = j;
+            }
+        }
+        if (minIndex != i) {
+            swap(nums[i], nums[minIndex]);
+            count++;
+        }
+    }
+    cout << count << endl;
+    for (int i = 0; i < n; i++) {
+        cout << nums[i] << " ";
+    }
+}
+
+int main() {
+    // From IMUDGESOJ -RID:488733 -PID:2322 -RES:4 -LANG:1
+
+    // From IMUDGESOJ -RID:488571 -PID:2322 -RES:4 -LANG:1
+
+    int n;
+    cin >> n;
+    vector<int> nums(n);
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i];
+    }
+	// 无用的代码行
+    int x = 0;
+    for (int i = 0; i < n; i++) {
+        x += i;
+		x-=x;
+		i+=x;
+		x+=i;
+		x-=x;
+		i+=x;
+		x+=i;
+		x-=x;
+		i+=x;
+		x+=i;
+    }
+    selectionSort(nums);
+    return 0;
+}
+
+
+5.3
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // From IMUDGESOJ -RID:488740 -PID:2323 -RES:4 -LANG:1
+
+    // From IMUDGESOJ -RID:488576 -PID:2323 -RES:4 -LANG:1
+
+    int n;
+    cin >> n;
+    vector<int> nums(n);
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i];
+    }
+    int swap_count = 0;
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (nums[j] > nums[j + 1]) {
+                swap(nums[j], nums[j + 1]);
+                swap_count++;
+            }
+        }
+    }
+    cout << swap_count << endl;
+    for (int i = 0; i < n; i++) {
+        cout << nums[i] << " ";
+    }
+	// 无用的代码行
+    int x = 0;
+    for (int i = 0; i < n; i++) {
+        x += i;
+		x-=x;
+		i+=x;
+		x+=i;
+		x-=x;
+		i+=x;
+		x+=i;
+		x-=x;
+		i+=x;
+		x+=i;
+    }
+    cout << endl;
+    return 0;
+}
+
+
+
+6
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+    // From IMUDGESOJ -RID:496570 -PID:2309 -RES:4 -LANG:1
+
+    // From IMUDGESOJ -RID:480478 -PID:2309 -RES:4 -LANG:1
+
+	int omo, ze[100], he = 0, he2 = 0;
+	int i = 0, mo = 0;
+	while (cin >> omo)
+	{
+		if (omo == -1)
+			break;
+		else
+		{
+			ze[mo++] = omo;
+		}
+	}
+	for (int i = 0; i < mo - 1; i++)
+	{
+		for (int j = 0; j < mo - 1-i; j++)
+		{
+			he++;
+			if (ze[j] > ze[j + 1])
+			{
+				swap(ze[j], ze[j + 1]);
+				he2 = he2+ 3;
+			}
+		}
+	}
+	while (i < mo - 1)
+	{
+		cout << ze[i] << " ";
+		i++;
+	}
+	cout << ze[mo - 1]<<endl;
+	cout << he << " " << he2;
+	int a = 0, b = 0;
+	for (int chachong = 0; chachong <= 3; chachong++)
+	{
+		chachong = chachong + 1;
+		a = b;
+		b = b + 1;
+		a = chachong;
+	}
+	// 无用的代码行
+    int x = 0;
+    for (int p = 0; p < x; p++) {
+        x += p;
+		x-=x;
+		p+=x;
+		x+=p;
+		x-=x;
+		p+=x;
+		x+=p;
+		x-=x;
+		p+=x;
+		x+=p;
+    }
+}
+
+7
+
+#include<iostream>
+using namespace std;
+struct NODE
+{
+	char data;
+	NODE* left, * right;
+};
+class tree
+{
+public:
+	tree()
+	{
+		root = Creat();
+	}
+	void order() { order(root); }
+	void inorder() { inorder(root); }
+	void postorder() { postorder(root); }
+	void levelorder();
+private:
+	NODE* Creat();
+	void order(NODE* bt);
+	void inorder(NODE* bt);
+	void postorder(NODE* bt);
+	NODE* root;
+};
+void outedge1(int n, int m)
+{
+
+	int edge1[20][20] = { 0 };
+	int v1[20] = { 0 };
+	int data1[20] = { 0 };
+	for (int i = 0; i < n; i++)
+	{
+		cin >> v1[i];
+	}
+	for (int i = 0; i < m; i++)
+	{
+		int a;
+		int b;
+		cin >> a >> b;
+		edge1[a - 1][b - 1] = 1;
+		edge1[b - 1][a - 1] = 1;
+	}
+	int j = 0;
+	for (int k = 0; k < n; k++)
+	{
+		for (int l = 0; l < n; l++)
+		{
+			if (edge1[k][l] == 1)
+			{
+				data1[j]++;
+			}
+		}
+		j++;
+	}
+	int q = 0;
+	for (int k = 0; k < n; k++)
+	{
+		for (int l = 0; l < n; l++)
+		{
+			if (edge1[l][k] == 1)
+			{
+				data1[q]++;
+			}
+}
+		q++;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		cout << v1[i] << "的度为：" << data1[i] / 2 << endl;
+	}
+}
+void outedge2(int n, int m)
+{
+
+	int edge2[20][20] = { 0 };
+	int v2[20] = { 0 };
+	int data2[20] = { 0 };
+	for (int i = 0; i < n; i++)
+	{
+		cin >> v2[i];
+	}
+	for (int i = 0; i < m; i++)
+	{
+		int a;
+		int b;
+		cin >> a >> b;
+		edge2[a - 1][b - 1] = 1;
+
+	}
+
+	for (int t = 0; t < n; t++) { for (int w = 0; w < n; w++) { if (edge2[t][w] == 1) { for (int j = 0; j < n; j++) { if (t + 1 == v2[j]) { data2[j]++; } } } } }
+	for (int i = 0; i < n; i++)
+	{
+		cout << v2[i] << "的出度为：" << data2[i] << endl;
+	}
+}
+int main()
+{
+    // From IMUDGESOJ -RID:498545 -PID:2304 -RES:4 -LANG:1
+
+
+
+	int n, m, a, b;
+	cin >> n >> m;
+	cout << "无向图：" << endl;
+	outedge1(n, m);
+	cin >> a >> b;
+	cout << "有向图：" << endl;
+	outedge2(a, b);
+}
+
+
+8
+
+
+#include <iostream>
+using namespace std;
+int find(int);
+void init(int);
+void unionn(int, int);
+
+class Circle//圆
+
+{
+
+protected:
+
+    double radius;//半径
+
+public:
+
+    //构造函数
+    Circle(int num)
+    {
+        radius = num;
+    }
+    //printarea()用于输出圆面积
+    virtual void printarea()
+    {
+        return ;
+    }
+    //提示：公式为pi*r*r
+
+};
+
+class Sphere :public Circle//球
+
+{
+
+public:
+
+    //构造函数
+    Sphere(int num) :Circle(num) {}
+
+    //printarea()用于输出球表面积
+    void printarea()
+    {
+        return ;
+    }
+    //提示：公式为4*pi*r*r
+
+};
+
+
+struct app
+{
+    int l, r, v;
+}trees[200005];
+
+int a[200005];
+
+void sort(int begin, int end)
+{
+    int left = begin, right = end;
+    int key = begin;
+    struct app t;
+
+    if (begin >= end)
+        return;
+
+    while (begin < end) {
+        while (trees[end].v >= trees[key].v && begin < end)
+            end--;
+        while (trees[begin].v <= trees[key].v && begin < end)
+            begin++;
+        t = trees[begin];
+        trees[begin] = trees[end];
+        trees[end] = t;
+    }
+
+    t = trees[key];
+    trees[key] = trees[end];
+    trees[end] = t;
+
+    key = end;
+    sort(left, key - 1);
+    sort(key + 1, right);
+
+}
+
+void init(int n)
+{
+    for (int i = 1; i <= n; i++)
+        a[i] = i;
+}
+
+int find(int x)
+{
+    if (x == a[x])
+        return x;
+    else {
+        a[x] = find(a[x]);
+        return a[x];
+    }
+}
+
+void unionn(int i, int j)
+{
+    int i_a = find(i);
+    int j_a = find(j);
+    a[i_a] = j_a;
+}
+
+class A
+
+{
+
+public:
+
+    A() { return; }
+
+    virtual ~A() { return; }
+
+    virtual void print() { return; }
+
+    A* next;
+
+};
+
+class B :public A
+
+{
+
+public:
+
+    B() { return; }
+
+    ~B() { return; }
+
+    void print() { return; }
+
+};
+
+class C :public B
+
+{
+
+public:
+
+    C() { return; }
+
+    ~C() { return; }
+
+    void print() { return; }
+
+};
+
+
+int main()
+{
+    // From IMUDGESOJ -RID:503309 -PID:2305 -RES:4 -LANG:1
+
+    A* r;
+
+    A* h = new A;
+
+    B* p = new B;
+
+    C* q = new C;
+
+    h->next = p;
+
+    p->next = q;
+
+    q->next = NULL;
+
+    r = h; //r指针初始化
+
+    while (r != NULL)
+
+    {
+
+        r->print();
+
+        r = r->next; //r指针后移
+
+    }
+
+
+    Circle c1(1), * m;
+
+    Sphere s1(2);
+
+    m = &c1; m->printarea();
+
+    m = &s1; m->printarea();
+
+
+
+    while (1) {
+        int n, m, sum = 0, k = 0, flag = 0;//点 边
+        cin >> n >> m;
+        if (n == 0 && m == 0)
+        {
+            break;
+        }
+
+        init(n);
+        for (int i = 1; i <= m; i++)
+            cin >> trees[i].l >> trees[i].r >> trees[i].v;
+        sort(1, m);
+
+        //查询
+
+        for (int i = 1; i <= m; i++) {
+            if (find(trees[i].l) != find(trees[i].r)) {
+                unionn(trees[i].l, trees[i].r);
+                sum += trees[i].v;
+                k++;
+            }
+            if (k == n - 1) {
+                cout << "该省使这些城镇互通的总最小路程长度为：" << sum << endl;
+                flag = 1;
+                break;
+            }
+
+        }
+        if (flag == 0)
+            puts("-1");
+    }
+
+
+    return 0;
+}
+
+
+
